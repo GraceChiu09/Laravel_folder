@@ -10,8 +10,9 @@
     <h3>今天是拉拉日</h3>
     <!-- <a href="/bikes/create">create btn</a> -->
 
-    <!-- <a href="{{route('bikes.create')}}">create btn</a> -->
+    <a href="{{route('bikes.create')}}">create btn</a>
 
-     <a href="{{route('bikes.edit',['bike' => 1, 'test'] => 123)}}">edit btn</a>
-</body>
+     <a href="{{route('bikes.edit',['bike' => 1, 'test' => 123])}}">edit btn</a>
+     <a href="{{route('student555')}}">student btn</a>
+    </body>
 </html>

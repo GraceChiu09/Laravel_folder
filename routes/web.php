@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TestController;
+// use App\Http\Controllers\StudentController;
+use App\Http\Controllers\bikeController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -34,13 +37,13 @@ Route::get('/hello', function () {
     return view('f1');
 });
 
-// Route::get('/student', [TestController::class, 'index']);
+Route::get('/student', [TestController::class, 'index']);
 
 Route::get('/f2', function () {
     return view('test');
 });
 
-Route::get('/get/{name}/{num}', [TestController::class, 'getByurl']);
+// Route::get('/get/{name}/{num}', [TestController::class, 'getByurl']);
 
 
 // Route::get('/student', function () {
@@ -59,7 +62,10 @@ Route::get('/get/{name}/{num}', [TestController::class, 'getByurl']);
 //     'posts' => PostController::class,
 // ]);
 
-use App\Http\Controllers\bikeController;
+
  
 Route::resource('bikes', bikeController::class);
+
+Route::get('/student', [TestController::class, 'index'])->name('student555');
+
 

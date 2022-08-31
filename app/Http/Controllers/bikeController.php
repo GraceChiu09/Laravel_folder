@@ -15,8 +15,8 @@ class bikeController extends Controller
     public function index()
     {
         // dd('bike index');
-        $url = route('bikes.edit', ['bike' => 2, 'test' => 789, 'fuck' => 789]);
-        dd($url);
+        // $url = route('bikes.edit', ['bike' => 2, 'test' => 789, 'fuck' => 789]);
+        // dd($url);
         return view('bike.index');
     }
 
