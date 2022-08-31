@@ -1,0 +1,31 @@
+<?php
+ 
+namespace App\Http\Controllers;
+ 
+use App\Http\Controllers\Controller;
+use App\Models\User;
+ 
+class ProvisionServer extends Controller
+{
+    /**
+     * Provision a new web server.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function __invoke()
+    {
+        // ...
+    }
+}
+
+php artisan make:controller PhotoController --model=Photo --resource
+
+php artisan make:controller bikeController --model=Photo --resource
+
+use App\Http\Controllers\PhotoController;
+ 
+Route::resource('photos', PhotoController::class);
+
+use App\Http\Controllers\bikeController;
+ 
+Route::resource('bikes', PhotoController::class);
