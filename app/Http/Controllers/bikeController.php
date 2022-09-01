@@ -17,7 +17,13 @@ class bikeController extends Controller
         // dd('bike index');
         // $url = route('bikes.edit', ['bike' => 2, 'test' => 789, 'fuck' => 789]);
         // dd($url);
-        return view('bike.index');
+        $myArr = [1,2,3];
+        $data =[
+            'myArr' => $myArr,
+            'v1' => 11,
+            'v2' => 23
+        ];
+        return view('bike.index',['data' => $data]);
     }
 
     /**
