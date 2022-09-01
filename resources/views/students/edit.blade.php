@@ -10,7 +10,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
 </head>
 <body>
-    <h4 class="display-4">新增表單</h2>
+    <h4 class="display-4">Hello 你好嗎? 衷心感謝</h2>
         <a class="btn btn-primary" href="#" role="button">add</a>
         <br><br>
         <table class="table">
@@ -20,27 +20,37 @@
             <th scope="col">中文</th>
             <th scope="col">英文</th>
             <th scope="col">數學</th>
+            <th scope="col">音樂</th>
           </tr>
         </thead>
-        <tbody>
-          @foreach ($data as $key => $value)
-              <tr>
-                <td>
-                    {{$value['name']}}
-                </td>
-                <td>
-                    {{$value['chinese']}}
-                </td>
-                <td>
-                    {{$value['english']}}
-                </td>
-                <td>
-                    {{$value['math']}}
-                </td>
-
-              </tr>
-          @endforeach
-        </tbody>
+        <form action="{{route('students.store')}}" method="post">
+          @csrf
+          <tbody>
+            <tr>
+              <td>
+                <input type="text" name="name" id="name">
+              </td>
+              <td>
+                <input type="number" name="chinese" id="chinese">
+              </td>
+              <td>
+                <input type="number" name="english" id="english">
+              </td>
+              <td>
+                <input type="number" name="math" id="math">
+              </td>
+              <td>
+                <input type="number" name="music" id="music">
+              </td>
+            </tr>
+            <tr>
+              <td colspan="4">
+                <input type="submit" value="add submit">
+              </td>
+            </tr>
+          </tbody>
+        </form>
+       
       </table>
 </body>
 </html>

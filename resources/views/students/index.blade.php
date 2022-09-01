@@ -10,8 +10,8 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
 </head>
 <body>
-    <h4 class="display-4">新增表單</h2>
-        <a class="btn btn-primary" href="#" role="button">add</a>
+    <h4 class="display-4">Hello 你好嗎? 衷心感謝</h2>
+        <a class="btn btn-primary" href="{{route('students.create')}}" role="button">add</a>
         <br><br>
         <table class="table">
         <thead class="thead-dark">
@@ -20,6 +20,8 @@
             <th scope="col">中文</th>
             <th scope="col">英文</th>
             <th scope="col">數學</th>
+            <th scope="col">音樂</th>
+            <th scope="col">新增或刪除</th>
           </tr>
         </thead>
         <tbody>
@@ -37,7 +39,14 @@
                 <td>
                     {{$value['math']}}
                 </td>
-
+                <td>
+                    {{$value['music']}}
+                </td>
+                <td>
+                  <a href="{{route('students.edit', ['students' -> $data -> id])}}"><button class="btn btn-warning" type="submit">新增</button></a>
+                  <a href="{{route('students.create')}}"><button class="btn btn-danger" type="submit">刪除</button></a>
+                </td>
+                  
               </tr>
           @endforeach
         </tbody>

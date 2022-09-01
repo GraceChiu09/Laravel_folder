@@ -65,7 +65,8 @@ Route::get('/f2', function () {
 
  
 Route::resource('bikes', bikeController::class);
+Route::resource('students', TestController::class);
 
-Route::get('/student', [TestController::class, 'index'])->name('student555');
+// Route::get('/student', [TestController::class, 'index'])->name('students');
 
 
