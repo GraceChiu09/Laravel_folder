@@ -13,6 +13,7 @@ php artisan migrate --pretend
 
 php artisan migrate --force
 
+
 php artisan migrate:rollback
 
 php artisan migrate:reset
@@ -21,3 +22,60 @@ php artisan migrate:refresh
  
 # Refresh the database and run all database seeds...
 php artisan migrate:refresh --seed
+
+MODEL
+
+php artisan make:model Flight
+php artisan make:model Student
+
+
+use App\Models\Flight;
+ 
+foreach (Flight::all() as $flight) {
+    echo $flight->name;
+}
+
+
+use App\Models\Student;
+ 
+foreach (Student::all() as $student) {
+    echo $studen->name;
+}
+
+
+use App\Http\Controllers\UserController;
+use App\Models\User;
+ 
+// Route definition...
+Route::get('/users/{user}', [UserController::class, 'show']);
+ 
+// Controller method definition...
+public function show(User $user)
+{
+    return view('user.profile', ['user' => $user]);
+}
+
+
+use App\Http\Controllers\UserController;
+use App\Models\User;
+ 
+// Route definition...
+Route::get('/users/{user}', [UserController::class, 'show']);
+ 
+// Controller method definition...
+public function show(User $user)
+{
+    return view('user.profile', ['user' => $user]);
+}
+
+
+
+
+
+
+
+
+
+
+
+
